@@ -4,12 +4,16 @@ created by FutureTeCLab
 
 please create noname.ini
 
-``` noname.ini
+noname.ini
+```
 [noname]
-TOKEN = tokenkey
+# Discord Developper URL -> https://discordapp.com/developers/applications/
+TOKEN = Discord_Bot_API_tokenkey
 [weather]
-APIKEY = apikey
+# open weather API -> https://openweathermap.org/api
+APIKEY = open_weather_API_key
 [yahoo]
-clientid = dj00aiZpPWp4aEJRQnJnQUtmbSZzPWNvbnN1bWVyc2VjcmV0Jng9OGU-
-secret = UazuS8fUFbD8YgByLBOuWmZaezPIQs6laauoZ9aV
+# yahoo 自然言語理解 API https://developer.yahoo.co.jp/webapi/jlp/nlu/v1/
+clientid = yahoo_natural_language_API_id
+secret = yahoo_natural_language_secret_key
 ```
