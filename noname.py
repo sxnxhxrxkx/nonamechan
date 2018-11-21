@@ -7,6 +7,7 @@ import subprocess
 import weather as wt
 from nlu_yahoo import nluservice
 from MorseCode import morse
+from wc import noname_wc
 #import softalk as sf
 import noname_vocabulary as nnm
 import traceback
@@ -192,7 +193,12 @@ async def on_message(message):
             msg += nnm.hex2dec(msg, message.content)
             nonamelog(getUser(message),'hex2dec', message.content)
             await client.send_message(message.channel, msg)
-        
+
+        if message.content.startswith('!wc'):
+            msg += noname_wc(msg, message.content)
+            nonamelog(getUser(message),'wc', message.content)
+            await client.send_file(message.channel, "temp.png", content="スクレイピングしたよ!", filename="send.png")
+
         # add -------
         if message.content.startswith('$thumb'):
             msg = await client.send_message(message.channel, 'React with thumbs up or thumbs down.')
