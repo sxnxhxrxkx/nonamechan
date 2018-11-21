@@ -1,3 +1,4 @@
 *.log
 *.ini
 temp.png
+__pycache__*
