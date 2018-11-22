@@ -34,7 +34,8 @@ def get_wordlist(url):
     
 def create_wordcloud(text):
     # 環境に合わせてフォントのパスを指定する。
-    fpath = "C:\\WINDOWS\\FONTS\\YUGOTHB.TTC"
+    #fpath = "C:\\WINDOWS\\FONTS\\YUGOTHB.TTC"
+    fpath = "ipag.ttc"
 
     # ストップワードの設定
     stop_words = [ u'てる', u'いる', u'なる', u'れる', u'する', u'ある', u'こと', u'これ', u'さん', u'して', \
