@@ -2,7 +2,6 @@ import os
 from logging import getLogger, FileHandler, StreamHandler, Formatter, shutdown
 
 def writelog(logname,systemname,msg):
-    #logpath = 'C:\\Users\\EXPRESS\\Desktop\\python\\00_Python_Program\\PM\\log'
     logpath = 'log'
     if os.path.exists(logpath) == False:
         print("mkdir", logpath)
