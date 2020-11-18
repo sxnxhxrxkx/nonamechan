@@ -21,75 +21,89 @@ def nonamehelp(msg):
 
 def sasisuseso(msg):
     dice = random.randrange(5)
-    if dice == 1:
+    if dice == 0:
         msg += 'さすがですね！'
-    elif dice == 2:
+    elif dice == 1:
         msg += '知らなかった。。。'
-    elif dice == 3:
+    elif dice == 2:
         msg += 'すっごーい☆'
-    elif dice == 4:
+    elif dice == 3:
         msg += 'センスいい！'
-    elif dice == 5:
+    elif dice == 4:
         msg += 'そうなんだ？！'
+    return msg
+
+def okoku(msg):
+    dice = random.randrange(5)
+    if dice == 0:
+        msg += 'どうもありがとっ///'
+    elif dice == 1:
+        msg += 'ふふふ////'
+    elif dice == 2:
+        msg += 'もっともっとぉー！'
+    elif dice == 3:
+        msg += 'ホントにぃ～？'
+    elif dice == 4:
+        msg += 'ありがとー！'
     return msg
 
 def otsu(msg):
     dice = random.randrange(5)
-    if dice == 1:
+    if dice == 0:
         msg += 'おつですー'
-    elif dice == 2:
+    elif dice == 1:
         msg += 'おつかれさまです☆'
-    elif dice == 3:
+    elif dice == 2:
         msg += 'おつおつー'
-    elif dice == 4:
+    elif dice == 3:
         msg += '乙！'
-    elif dice == 5:
+    elif dice == 4:
         msg += 'おつんでれ'
     return msg
 
 def ohayo(msg):
     dice = random.randrange(11)
-    if dice == 1:
+    if dice == 0:
         msg += 'オハヨォ☆'
-    elif dice == 2:
+    elif dice == 1:
         msg += 'むくり'
-    elif dice == 3:
+    elif dice == 2:
         msg += '未来技術同好会、試作ロボット一号、のなめ、起動ーーー！'
-    elif dice == 4:
+    elif dice == 3:
         msg += 'ブーーーーン。システム、オールグリーン。のなめ、起動します！'
-    elif dice == 5:
+    elif dice == 4:
         msg += 'おはよ！のなめだよ！'
-    elif dice == 6:
+    elif dice == 5:
         msg += 'おはよ！まだ眠いね。。。'
-    elif dice == 7:
+    elif dice == 6:
         msg += 'おはよおはよ！おはよーーーー！'
-    elif dice == 8:
+    elif dice == 7:
         msg += '朝だよ！起きて！'
-    elif dice == 9:
+    elif dice == 8:
         msg += 'おはよ～！天気予報が必要な場合は"!天気"ってつぶやいてね。'
-    elif dice == 10:
+    elif dice == 9:
         msg += 'おはよう。今日も一日頑張るぞいっ！だね！'
     else:
         msg += 'おはよ！今日も元気！だね！'
     return msg
 
 def oyasumi(msg):
-    dice = random.randrange(9)
-    if dice == 1:
+    dice = random.randrange(10)
+    if dice == 0:
         msg += 'おやすみです。'
-    elif dice == 2:
+    elif dice == 1:
         msg += '(˘ω˘)ｽﾔｧ'
-    elif dice == 3:
+    elif dice == 2:
         msg += 'おやすみなさーーい☆'
-    elif dice == 4:
+    elif dice == 3:
         msg += 'システム、シャットダウン。のなめ、起動します！'
-    elif dice == 5:
+    elif dice == 4:
         msg += 'ハッ！寝てた？！'
-    elif dice == 6:
+    elif dice == 5:
         msg += 'ねむねむ。。。おやすみなさぁい。。。'
-    elif dice == 7:
+    elif dice == 6:
         msg += '大丈夫。。私が寝ても代わりがいるもの。。おやすみなさい。。zzZ'
-    elif dice == 8:
+    elif dice == 7:
         msg += 'おやすみ！ゆっくり寝てね？'
     else:
         msg += 'zzZZ'
@@ -138,7 +152,7 @@ def noname(msg):
         msg += 'ちょっ・・・今はだめ！！'
     elif dice == 9:
         msg += 'そうです！わたしが！のなめ！・・・です！'
-    elif dice == 10:
+    else:
         msg += 'はいはい。。のなめですよ～～。'
     return msg
 
@@ -158,7 +172,7 @@ def homete(msg):
         msg += 'ほんっとーに！よく頑張ったね！'
     elif dice == 7:
         msg += 'いつもお疲れ様！今日も頑張ったね？'
-    elif dice == 8:
+    else:
         msg += '私はいつも、見てますよ？'
     return msg
 
@@ -176,7 +190,7 @@ def tsukareta(msg):
         msg += 'よしよし・・・、ゆっくり休んでね？'
     elif dice == 6:
         msg += 'まぢ無理だよね・・・'
-    elif dice == 7:
+    else:
         msg += 'よしよし、頑張ったね？'
     return msg
 
@@ -240,7 +254,7 @@ def ouen(msg):
         msg += 'ガンバです！！！'
     elif dice == 8:
         msg += '大丈夫、大丈夫。あなたならやれますよ。'
-    elif dice == 9:
+    else:
         msg += 'できます！やるだけです！'
     return msg
 
@@ -262,12 +276,12 @@ def hagemasu(msg):
         msg += 'You can do it! キミはできる人だよ！'
     elif dice == 8:
         msg += 'ゆっくり息を吐いて。大丈夫、大丈夫。あなたならやれますよ。'
-    elif dice == 9:
+    else:
         msg += '疲れてるのかも？ゆっくりお風呂に入って、ストレッチして、早く寝てしまうのがいいかも！'
     return msg
 
 def batou(msg):
-    dice = random.randrange(11)
+    dice = random.randrange(20)
     if dice == 1:
         msg += '何物欲しそうな顔で見てるんです？のなめを見つめる許可、出してないですよ。'
     elif dice == 2:
@@ -289,6 +303,24 @@ def batou(msg):
     elif dice == 10:
         msg += 'そんなことお願いして、どうするつもりなの？普通に引きます。'
     elif dice == 11:
+        msg += '普通に引きます。'
+    elif dice == 12:
+        msg += 'ちょっと黙って。'
+    elif dice == 13:
+        msg += 'ちょっと黙ってくれる？'
+    elif dice == 14:
+        msg += '同じ空間で息を吸いたくない。消えて。'
+    elif dice == 15:
+        msg += '・・・'
+    elif dice == 16:
+        msg += '・・・なんなの？'
+    elif dice == 17:
+        msg += 'もう、息しないでくれる？くさい。'
+    elif dice == 18:
+        msg += '半径100m以内に近づくの禁止ね！'
+    elif dice == 19:
+        msg += 'そういうの、軽蔑します。'
+    else:
         msg += '毎日のなめがあなたなんかのために、返信してあげてるんだから、感謝してくださいね？'
 
     return msg   
@@ -315,6 +347,32 @@ def ganbaru(msg):
         msg += '応援団長ののなめだよ！フレっフレ！頑張れ！フレッフレ！かっこいいぞー！'
     return msg
 
+def yurusite(msg):
+    dice = random.randrange(11)
+    if dice == 1:
+        msg += '許します'
+    elif dice == 2:
+        msg += 'あなたを、許します'
+    elif dice == 3:
+        msg += '許した'
+    elif dice == 4:
+        msg += '許されたいんだね'
+    elif dice == 5:
+        msg += '許しましたよ'
+    elif dice == 6:
+        msg += 'のなめは許してるよ？'
+    elif dice == 7:
+        msg += '許す！'
+    elif dice == 8:
+        msg += '自分を許してあげてね？'
+    elif dice == 9:
+        msg += '許した！'
+    elif dice == 10:
+        msg += '許します！'
+    else:
+        msg += 'はい！許したよ！'
+    return msg
+
 def nurupo(msg):
     dice = random.randrange(3)
     if dice == 1:
@@ -331,29 +389,30 @@ def uranai(msg):
     if dice == 1:
         msg = 'すごい。何を言っているのかわからないと思うがのなめ占いで最も尊い運勢を出した。今日はいい事あるぜ。間違いねえよ。'
         negaposi = 'posi'
-    if dice > 1 and dice < 10:
+    elif dice > 1 and dice < 10:
         msg = 'あなたに幸せが舞い降りるかも！！大の吉！ですよ！おめでとうございますうううううううううううう'
         negaposi = 'posi'
-    elif dice > 10 and dice < 50:
+    elif dice >= 10 and dice < 50:
         msg = '吉です。のなめ占いでは中吉よりぐっどです。いいことあるかも？！おめでとうございます！'    
         negaposi = 'posi'
-    elif dice > 50 and dice < 150:
+    elif dice >= 50 and dice < 150:
         msg = '中の吉です。今日はそこそこ幸せな一日が訪れるかもしれません。'
         negaposi = 'posi'
-    elif dice > 150 and dice < 300:
+    elif dice >= 150 and dice < 300:
         msg = '小吉です。小さな幸せって意外とその辺にあったりしますよね。'    
         negaposi = 'posi'
-    elif dice > 300 and dice < 400:
+    elif dice >= 300 and dice < 400:
         msg = 'ガーン…末吉です。今日はちょっと気を付けて行きましょう。'
         negaposi = 'nega'
-    elif dice > 400 and dice < 490:
+    elif dice >= 400 and dice < 490:
         msg = 'ひぇ！凶！ちょっと今のはなかったことに・・・'
         negaposi = 'nega'
-    elif dice > 490:
+    elif dice >= 490:
         msg = 'お客さん、、こいつはちょっといけませんぜ、、、大の凶です。今日はもう外に出ないでくだせえ。。。'
         negaposi = 'nega'
     else:
         msg = 'ん～～～～？ちょっと何も見えないみたいです・・・'
+    msg += "これは内緒だけど乱数値は" + str(dice) + "だよ。"
     return msg, negaposi
 
 def luckynum(msg, negaposi):
@@ -460,6 +519,120 @@ def dicegame(msg,msgcontent):
         msg += '12面ダイスを6個の合計値で のなめと勝負だよ！ ぜひやってみて☆'
     return msg
 
+def tintirorin():
+    face = 6
+    cnt = 3
+    ans, total = diceroll(face, cnt)
+    ans = str.strip(ans)
+    result_str = ans.split(" ")
+    result_float = list(map(float, result_str))
+    result = list(map(int, result_float))
+    result.sort()
+
+    # ピンゾロ 111 5倍付
+    if result == [1,1,1]:
+        score = 5
+        yaku = "ピンゾロ"
+        reaction = "とってもすごいよ！最高の役！5倍付！"
+    # ゾロ目 222, ... ,666 3倍付
+    elif result == [2,2,2] or result == [3,3,3] or result == [4,4,4] or result == [5,5,5] or result == [6,6,6]:
+        score = 3
+        yaku = "ゾロ目"
+        reaction = "すごいね！これは強い役！3倍付！"
+
+    # シゴロ 456, 2倍付
+    elif result == [4,5,6]:
+        score = 2
+        yaku = "シゴロ"
+        reaction = "いいね！好きな役！2倍付！"
+
+    # 通常の目 1倍付
+    elif result.count(1) == 2:
+        result.remove(1)
+        result.remove(1)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result.count(2) == 2:
+        result.remove(2)
+        result.remove(2)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result.count(3) == 2:
+        result.remove(3)
+        result.remove(3)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result.count(4) == 2:
+        result.remove(4)
+        result.remove(4)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result.count(5) == 2:
+        result.remove(5)
+        result.remove(5)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result.count(6) == 2:
+        result.remove(6)
+        result.remove(6)
+        score = 1
+        yaku = str(result) + "の目"
+        reaction = "どうだろ？"
+
+    elif result == [1,2,3]:
+    # ヒフミ 123 2倍払い
+        score = -2
+        yaku = "ヒフミ"
+        reaction = "あー！残念！あなたの負け！2倍払いだよ！"
+
+    # 目無し 1倍払い
+    else:
+        score = -1
+        yaku = "目なし"
+        reaction = "残念だね！"
+
+    # # ネガポジ
+    # if score > 0:
+    #     negaposi = "posi"
+    # else:
+    #     negaposi = "nega"
+
+    return score, yaku, result_str, reaction
+
+def tintiro(msg, msgcontent):
+    score, yaku, result_str, reaction = tintirorin()
+    #result_str = list(map(str, result))
+    msg = ""
+    # ションベン判定
+    dice = random.randrange(100)
+    if dice > 5:
+        msg += '出目は【' + " ".join(result_str) + '】っと。'
+        msg += '役は 【' + str(yaku) + '】だよ！'
+        msg += 'スコアは 【' + str(score) + '】だよ！'
+    else:
+        msg += '出目は・・・ああ！【ションベン】だよ！'
+        msg += 'スコアは【-2】で、もうサイコロ振れないよ！あなたの負け！'
+        yaku = "ションベン"
+        score = -2
+    
+    msg += reaction
+    #     negameposi = "nega"
+    # if negaposi == "nega":
+    #     msg += '残念だね！'
+    # else:
+    #     msg += 'どうかな？'
+    return msg, score, yaku, result_str, reaction
+
 def ninja(msg,user):
     dice = random.randrange(5)
     if dice == 1:
@@ -555,5 +728,54 @@ def hex2dec(msg, msgcontent):
     else:
         flag = True
     if flag:        
-        msg += '!bin2dec FE の形で16進数の数字を打ってみて！10進数に変換するよ！'
+        msg += '!hex2dec FE の形で16進数の数字を打ってみて！10進数に変換するよ！'
+    return msg
+
+def dakuon(msg, msgcontent):
+    flag = False
+    if ' ' in msgcontent:
+        datas = msgcontent.split(' ')[1]
+        #msg += "「" + datas + "」を濁音に変換するよ！"
+        try:
+            for data in datas:
+                msg += str(data) + "”"
+            msg += "！" * len(datas)
+        except:
+            msg += "変換できないよ？！"
+    else:
+        flag = True
+    if flag:        
+        msg += '!濁音 いきたい の形で打ってみて！い”ぎ”た”い” に変換するよ！'
+    return msg
+
+def handakuon(msg, msgcontent):
+    flag = False
+    if ' ' in msgcontent:
+        datas = msgcontent.split(' ')[1]
+        #msg += "「" + datas + "」を濁音に変換するよ！"
+        try:
+            for data in datas:
+                msg += str(data) + "ﾟ"
+            msg += "！" * len(datas)
+        except:
+            msg += "変換できないよ？！"
+    else:
+        flag = True
+    if flag:        
+        msg += '!半濁音 いきたい の形で打ってみて！いﾟぎﾟたﾟいﾟ に変換するよ！'
+    return msg
+
+def repeat(msg, msgcontent):
+    flag = False
+    if ' ' in msgcontent:
+        datas = msgcontent.split(' ')[1]
+        #msg += "「" + datas + "」を濁音に変換するよ！"
+        try:
+            msg += str(datas)
+        except:
+            msg += "言い返せないよ？"
+    else:
+        flag = True
+    if flag:        
+        msg += '!repeat xxxx の形で打ってみて！オオム返しするよ！'
     return msg

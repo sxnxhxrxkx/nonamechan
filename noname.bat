@@ -1,0 +1,2 @@
+python noname.py
+pause
