@@ -11,6 +11,7 @@ from MorseCode import morse
 #import softalk as sf
 from calender import getCalender, getCalLink, getCommandList
 from news import getNews
+from matchbattle.map import getTargetMap
 import noname_vocabulary as nnm
 import traceback
 from logger import writelog
@@ -185,14 +186,6 @@ async def on_message(message):
                 nonamelog(getUser(message),'somedice', message.content)
             await message.channel.send( msg)
 
-        # if message.content.startswith('!ちんちろ') or message.content.startswith('!チンチロ'):
-        #     msg = "ちんちろりんだね！サイコロを振るよ！"
-        #     await message.channel.send( msg)
-        #     msg, score, yaku, result_str, negaposi = nnm.tintiro(msg, message.content)
-        #     nonamelog(getUser(message),'tintiro', message.content)
-        #     await message.channel.send( msg)
-        #     return
-
         if message.content.startswith('!ちんちろ') or message.content.startswith('!チンチロ'):
             msg = "ちんちろりんだね！役が出るまで3回サイコロを振るよ！"
             await message.channel.send( msg)
@@ -223,19 +216,6 @@ async def on_message(message):
 
             msg = '結果をまとめるね！'
             await message.channel.send( msg)
-            # msg = '-------------------------------'
-            # await message.channel.send( msg)
-            # msg = 'あなたの結果'
-            # await message.channel.send( msg)
-            # msg = '回数　：' + str(cnt) + '投'
-            # await message.channel.send( msg)
-            # msg = '役　　：' + yaku
-            # await message.channel.send( msg)
-            # msg = 'スコア：' + str(score)
-            # await message.channel.send( msg)
-            # msg = '-------------------------------'
-            # await message.channel.send( msg)
-
             # ヘッダ
             embed = discord.Embed(title="---ちんちろりん結果---", description='プレイヤ：{0.author.mention}'.format(message))
             embed.add_field(name="投数", value=str(cnt) + '投')
@@ -246,6 +226,24 @@ async def on_message(message):
             msg = 'また遊んでね！'
             await message.channel.send( msg)
             nonamelog(getUser(message),'tintiro', message.content)
+            return
+
+        if message.content.startswith('!マップ') or message.content.startswith('!map'):
+            msg = "対戦マップを取得するね！"
+            await message.channel.send( msg)
+            map_name, map_path = getTargetMap()
+            await message.channel.send(map_path)
+            # ヘッダ
+            embed = discord.Embed(title=map_name)#, description=map_name)
+            #embed.set_image(url=map_path)
+            # embed.add_field(name="マップ", value=str(map_name))
+            # embed.add_field(name="役", value=yaku)
+            # embed.add_field(name="スコア", value=str(score))
+            await message.channel.send(embed=embed)
+
+            msg = 'さぁ！楽しみだね！'
+            await message.channel.send( msg)
+            nonamelog(getUser(message),'map', message.content)
             return
 
 
@@ -300,15 +298,7 @@ async def on_message(message):
             nonamelog(getUser(message),'repeat', message.content)
             await message.channel.send( msg)
 
-        # if message.content.startswith('!カレンダ'):
-        #     msg = "幻影戦争のイベントカレンダーリンクだね！"
-        #     await message.channel.send( msg)
-        #     msg = nnm.ffbeCal(msg)#, message.content)
-        #     await message.channel.send( msg)
-        #     msg = "今はやっつけだからリンクだけだよ！参考になったかな？"
-        #     nonamelog(getUser(message),'cal', message.content)
-        #     await message.channel.send( msg)
-
+        # 幻影戦争イベントカレンダーのリンク取得
         if message.content.startswith('!カレンダリンク'):
             nonamelog(getUser(message),'cal', message.content)
             msg = "幻影戦争のイベントカレンダーは以下のリンクだよ！"
@@ -319,6 +309,7 @@ async def on_message(message):
             await message.channel.send( msg)
             return
 
+        # 幻影戦争イベントカレンダーの取得
         if message.content.startswith('!カレンダ'):
             nonamelog(getUser(message),'cal', message.content)
             msg, df = getCalender( msg, message.content)
@@ -327,7 +318,6 @@ async def on_message(message):
             await message.channel.send( msg)
             for index, row in df.iterrows():
                 msg = row['start'].strftime('%m/%d %H') + "' - " + row['end'].strftime('%m/%d %H') + "'" + " " + row['category'] + " " +  row['event']
-                #msg = row['start'].strftime('%m/%d.%H') + "-" + row['end'].strftime('%m/%d.%H') + " " + row['category'] + " " +  row['event']
                 await message.channel.send( msg)
             msg = "--------------------------------------"
             await message.channel.send( msg)
